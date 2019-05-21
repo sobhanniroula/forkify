@@ -11,7 +11,7 @@ export default class Recipe {
             const res = await axios(`${proxy}${site}get?key=${key}&rId=${this.id}`);
             this.title = res.data.recipe.title;
             this.author = res.data.recipe.publisher;
-            this.img = res.data.recipe.img_url;
+            this.img = res.data.recipe.image_url;
             this.url = res.data.recipe.source_url;
             this.ingredients = res.data.recipe.ingredients;
         } catch (error) {
